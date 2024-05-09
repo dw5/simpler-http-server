@@ -1,3 +1,5 @@
+# Simpler HTTP Server  
+
 # How it looks like?
 
 ### Screenshot
@@ -5,7 +7,7 @@
 
 ### Command Line Arguments
 ```
-Simpler HTTP(s) Server 0.6.3
+Simpler HTTP(s) Server 0.6.9x
 
 USAGE:
     simpler-http-server [FLAGS] [OPTIONS] [--] [root]
@@ -19,28 +21,30 @@ FLAGS:
         --nocache    Disable http cache
         --norange    Disable header::Range support (partial request)
         --nosort     Disable directory entries sort (by: name, modified, size)
+    -o, --open       Open the page in the default browser
     -s, --silent     Disable all outputs
-    -u, --upload     Enable upload files (multiple select) (CSRF token required)
+    -u, --upload     Enable upload files. (multiple select)
     -V, --version    Prints version information
 
 OPTIONS:
-    -a, --auth <auth>                              HTTP Basic Auth (username:password)
-        --cert <cert>                              TLS/SSL certificate (pkcs#12 format)
-        --certpass <certpass>                      TLS/SSL certificate password
-    -c, --compress <compress>...
-            Enable file compression: gzip/deflate
-                Example: -c=js,d.ts
-                Note: disabled on partial request!
-        --ip <ip>                                  IP address to bind [default: 0.0.0.0]
-    -p, --port <port>                              Port number [default: 8000]
-        --redirect <redirect>                      takes a URL to redirect to using HTTP 301 Moved Permanently
-    -t, --threads <threads>                        How many worker threads [default: 3]
-        --try-file <PATH>
-            serve this file (server root relative) in place of missing files (useful for single page apps) [aliases:
-            try-file-404]
-    -l, --upload-size-limit <upload_size_limit>    Upload file size limit [bytes] [default: 8000000]
+    -a, --auth <auth>                HTTP Basic Auth (username:password)
+    -b, --base-url <base-url>        Base URL to prepend in directory indexes. For reverse proxying. This prefix is
+                                     supposed to be pre-stripped when reaching simple-http-server. [default: /]
+        --cert <cert>                TLS/SSL certificate (pkcs#12 format)
+        --certpass <certpass>        TLS/SSL certificate password
+    -c, --compress <compress>...     Enable file compression: gzip/deflate
+                                         Example: -c=js,d.ts
+                                         Note: disabled on partial request!
+        --ip <ip>                    IP address to bind [default: 0.0.0.0]
+    -p, --port <port>                Port number [default: 8000]
+        --redirect <redirect>        takes a URL to redirect to using HTTP 301 Moved Permanently
+    -t, --threads <threads>          How many worker threads [default: 3]
+        --try-file <PATH>            serve this file (server root relative) in place of missing files (useful for single
+                                     page apps) [aliases: try-file-404]
+    -l, --upload-size-limit <NUM>    Upload file size limit [bytes] [default: 8000000]
 
-
+ARGS:
+    <root>    Root directory
 ```
 
 # Installation
