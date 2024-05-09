@@ -5,10 +5,10 @@
 
 ### Command Line Arguments
 ```
-Simple HTTP(s) Server 0.6.3
+Simpler HTTP(s) Server 0.6.3
 
 USAGE:
-    simple-http-server [FLAGS] [OPTIONS] [--] [root]
+    simpler-http-server [FLAGS] [OPTIONS] [--] [root]
 
 FLAGS:
         --coep       Add "Cross-Origin-Embedder-Policy" HTTP header and set it to "require-corp"
@@ -46,7 +46,7 @@ OPTIONS:
 # Installation
 
 ### Download binary 
-[Goto Download](https://github.com/TheWaWaR/simple-http-server/releases)
+[Goto Download](https://github.com/dw5/simpler-http-server/releases)
 
  - windows-64bit
  - osx-64bit
@@ -59,10 +59,10 @@ OPTIONS:
 # Install Rust
 curl https://sh.rustup.rs -sSf | sh
 
-# Install simple-http-server
-cargo install simple-http-server
+# Install simpler-http-server
+cargo install simpler-http-server
 rehash
-simple-http-server -h
+simpler-http-server -h
 ```
 
 # Features
@@ -82,7 +82,6 @@ simple-http-server -h
   - [Range, If-Range, If-Match] => [Content-Range, 206, 416]
 - [x] (default disabled) Automatic render index page [index.html, index.htm]
 - [x] (default disabled) Upload file
-  - A CSRF token is generated when upload is enabled and must be sent as a parameter when uploading a file
 - [x] (default disabled) HTTP Basic Authentication (by username:password)
 - [x] Sort by: filename, filesize, modified date
 - [x] HTTPS support
