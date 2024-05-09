@@ -212,7 +212,7 @@ fn main() {
             .long("base-url")
             .default_value("/")
             .takes_value(true)
-            .help("Base URL to prepend in directory indexes. For reverse proxying. This prefix is supposed to be pre-stripped when reaching simple-http-server."))
+            .help("Base URL to prepend in directory indexes. For reverse proxying. This prefix is supposed to be pre-stripped when reaching simpler-http-server."))
         .get_matches();
 
     let root = matches
@@ -382,7 +382,7 @@ fn main() {
     let rv = if cert.is_some() {
         printer
             .println_err(
-                "{}: TLS support is not enabled during compilation of simple-http-server",
+                "{}: TLS support is not enabled during compilation of simpler-http-server",
                 &[("ERROR", &Some(build_spec(Some(Color::Red), true)))],
             )
             .unwrap();

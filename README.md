@@ -1,4 +1,5 @@
 # Simpler HTTP Server  
+Fork of simpler-http-server removing CSRF (for rare niche edge cases when it's a must)  
 
 # How it looks like?
 
@@ -29,7 +30,7 @@ FLAGS:
 OPTIONS:
     -a, --auth <auth>                HTTP Basic Auth (username:password)
     -b, --base-url <base-url>        Base URL to prepend in directory indexes. For reverse proxying. This prefix is
-                                     supposed to be pre-stripped when reaching simple-http-server. [default: /]
+                                     supposed to be pre-stripped when reaching simpler-http-server. [default: /]
         --cert <cert>                TLS/SSL certificate (pkcs#12 format)
         --certpass <certpass>        TLS/SSL certificate password
     -c, --compress <compress>...     Enable file compression: gzip/deflate

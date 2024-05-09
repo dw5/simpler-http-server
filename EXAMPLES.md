@@ -40,3 +40,6 @@ function transfersh ($filename)
 # Example usage
 swscli(".\my-automatic-output.csv")
 ```
+
+If CURL is available on Windows (should be by default in W10 and W11 unless your workplace blocks it), and Linux distros
+curl.exe -v -X POST -F "csrf=notoken" -F "files=@$MyFile.csv;filename=$MyFile.csv" http://my-simpler-srv.local:8000/
